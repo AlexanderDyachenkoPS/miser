@@ -12,7 +12,7 @@ public class AnalyzeIMWTest {
 
 
     @Test
-    public void EmptyMaxSum() {
+    public void emptyMaxSum() {
 
         ArrayList<Integer> visitors = new ArrayList<Integer>();
         AnalyzeIMW ai = new AnalyzeIMW();
