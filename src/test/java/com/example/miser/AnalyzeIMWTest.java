@@ -47,17 +47,28 @@ public class AnalyzeIMWTest {
         }
 
     @Test
-    public void twoEqualIMWMaxSum() {
+    public void twoEqualIMWMaxSumButDifferentLength() {
 
         ArrayList<Integer> visitors = new ArrayList<Integer>(Arrays.asList(new Integer[] {1,5,null,null,1,2,2,2,null,3,3,2,null,null,1,5,2,null}));
 
         AnalyzeIMW ai = new AnalyzeIMW();
         ArrayList<Integer> maxVisitors = ai.maxSum(visitors);
 
-        assertTrue(maxVisitors.equals(new ArrayList<>(Arrays.asList(new Integer[] {3,3,2}))));
+        assertTrue(maxVisitors.equals(new ArrayList<>(Arrays.asList(new Integer[] {1,2,2,2}))));
 
     }
 
+    @Test
+    public void twoEqualIMWMaxSumSameLength() {
+        // return last one - this case is undefined
+        ArrayList<Integer> visitors = new ArrayList<Integer>(Arrays.asList(new Integer[] {1,5,null,null,1,6,1,null,3,3,2,null,null,1,5,2,null}));
+
+        AnalyzeIMW ai = new AnalyzeIMW();
+        ArrayList<Integer> maxVisitors = ai.maxSum(visitors);
+
+        assertTrue(maxVisitors.equals(new ArrayList<>(Arrays.asList(new Integer[] {1,5,2}))));
+
+    }
     @Test
     public void simpleIMWMaxSum() {
 

@@ -21,7 +21,7 @@ public class AnalyzeIMW {
             }
             // null
             if (visitors == null && !(maxVisitorsTmp.isEmpty())) {
-                        if (maxSumTmp>maxSum) {
+                        if (maxSumTmp>=maxSum && maxVisitors.size()<=maxVisitorsTmp.size()) {
                             maxSum=maxSumTmp;
                             maxVisitors.clear();
                             maxVisitors = (ArrayList<Integer>) maxVisitorsTmp.clone();
@@ -39,7 +39,7 @@ public class AnalyzeIMW {
         );
 
         //last
-        if (maxSumTmp>maxSum) {
+        if (maxSumTmp>=maxSum && maxVisitors.size()<=maxVisitorsTmp.size()) {
             maxSum=maxSumTmp;
             maxVisitors.clear();
             maxVisitors = (ArrayList<Integer>) maxVisitorsTmp.clone();
