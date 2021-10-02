@@ -11,12 +11,12 @@ public class AnalyzeIMW {
     ArrayList<Integer> maxVisitorsTmp = new ArrayList<Integer>();
 
 
-    public void maxSum (ArrayList<Integer> visitorsList) {
+    public ArrayList<Integer> maxSum (ArrayList<Integer> visitorsList) {
 
 
         visitorsList.forEach(visitors-> {
             // first null
-            if (visitors == null && maxVisitorsTmp.isEmpty()) {
+            if (visitors == null && maxVisitorsTmp.isEmpty() && maxVisitors.isEmpty()) {
                 System.out.println("first null");
             }
             // null
@@ -47,7 +47,7 @@ public class AnalyzeIMW {
 
         System.out.println(maxSum);
 
-        System.out.println("QQQ");
+        return maxVisitors;
 
     }
 
